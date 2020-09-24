@@ -1,37 +1,18 @@
-Welcome to Glitch
-=================
+# Simple page jank demo
 
-Click `Show` in the header to see your app live. Updates to your code will instantly deploy and update live.
+This page is a static HTML page that uses LaunchDarkly to control 
+the background color. This demonstrates the effect of the delay
+introduced when the LaunchDarkly client isn't bootstrapped with
+an initial set of flags.
 
-**Glitch** is the friendly community where you'll build the app of your dreams. Glitch lets you instantly create, remix, edit, and host an app, bot or site, and you can invite collaborators or helpers to simultaneously edit code with you.
+When you load this page, you'll notice that the blue background
+color appears after the page is initially rendered. This is
+because there's JS that determines what the background color
+should be based on a feature flag in LaunchDarkly.
 
-Find out more [about Glitch](https://glitch.com/about).
+The delay is introduced by the LaunchDarkly client initialization.
+To see the effect more pronouncely, you should disable cache on
+your browser when you load this page.
 
-
-Your Project
-------------
-
-### ← README.md
-
-That's this file, where you can tell people what your cool website does and how you built it.
-
-### ← index.html
-
-Where you'll write the content of your website. 
-
-### ← style.css
-
-CSS files add styling rules to your content.
-
-### ← script.js
-
-If you're feeling fancy you can add interactivity to your site with JavaScript.
-
-### ← assets
-
-Drag in `assets`, like images or music, to add them to your project
-
-Made by [Glitch](https://glitch.com/)
--------------------
-
-\ ゜o゜)ノ
+To read more about how to prevent this, read our guide on using
+feature flags on static sites](https://docs-stg.launchdarkly.com/374/guides/best-practices/using-feature-flags-on-static-sites)
