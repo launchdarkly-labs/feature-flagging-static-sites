@@ -14,5 +14,5 @@ The delay is introduced by the LaunchDarkly client initialization.
 To see the effect more pronouncely, you should disable cache on
 your browser when you load this page.
 
-To read more about how to prevent this, read our guide on using
-feature flags on static sites](https://docs-stg.launchdarkly.com/374/guides/best-practices/using-feature-flags-on-static-sites)
+To read more about how to prevent this, read our guide on [using
+feature flags on static sites](https://docs.launchdarkly.com/guides/best-practices/using-feature-flags-on-static-sites)
