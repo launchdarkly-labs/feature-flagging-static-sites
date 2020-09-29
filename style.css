@@ -1,6 +1,7 @@
 .ex {
-  border: 1px solid #eee;
+  border: 1px solid #ddd;
   border-radius:5px;
+  background-color: #eee;
 }
 iframe {
   outline:none;

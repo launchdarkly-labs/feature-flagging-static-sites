@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <title>LaunchDarkly: Flagging static site strategies</title>
+    <title>LaunchDarkly: Feature flag strategies with static sites</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -14,6 +14,21 @@
       crossorigin="anonymous"
     />
     <link href="style.css" rel="stylesheet" />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="container-fluid p-4">
@@ -33,7 +48,10 @@
             <h6 class="d-flex bd-highlight">
               <div class="w-100 bd-highlight">Render first then initialize</div>
               <div class="flex-shrink-1 bd-highlight">
-                <a href="#" id="reload-1"><img src="https://www.unpkg.com/bootstrap-icons@1.0.0/icons/arrow-repeat.svg" /></a>
+                <a href="#" id="reload1"
+                  ><img
+                    src="https://www.unpkg.com/bootstrap-icons@1.0.0/icons/arrow-repeat.svg"
+                /></a>
               </div>
             </h6>
             <iframe id="ex1" class="mt-2" src="ex1/index.html"></iframe>
@@ -42,9 +60,14 @@
         <div class="col">
           <div class="ex p-2">
             <h6 class="d-flex bd-highlight">
-              <div class="w-100 bd-highlight">Delay rendering until initialized</div>
+              <div class="w-100 bd-highlight">
+                Delay rendering until initialized
+              </div>
               <div class="flex-shrink-1 bd-highlight">
-                <a href="#" id="reload-2"><img src="https://www.unpkg.com/bootstrap-icons@1.0.0/icons/arrow-repeat.svg" /></a>
+                <a href="#" id="reload2"
+                  ><img
+                    src="https://www.unpkg.com/bootstrap-icons@1.0.0/icons/arrow-repeat.svg"
+                /></a>
               </div>
             </h6>
             <iframe id="ex2" src="ex1/index.html"></iframe>
