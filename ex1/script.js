@@ -1,8 +1,8 @@
 function updateDesign(isRedesignOn) {
   if (isRedesignOn) {
-    $('head').append('<link id="newdesign" rel="stylesheet" href="newdesign.css">')
+    $('body').addClass('redesign')
   } else {
-    $("#newdesign").remove();
+    $('body').removeClass('redesign')
   }
 }
 
