@@ -1,9 +1,8 @@
 function updateDesign(isRedesignOn) {
-  const main = document.getElementById("main");
   if (isRedesignOn) {
-    main.classList.add("redesign");
+    $('head').append('<link id="newdesign" rel="stylesheet" href="newdesign.css">')
   } else {
-    main.classList.remove("redesign");
+    $("#newdesign").remove();
   }
 }
 
