@@ -91,7 +91,7 @@
               may see some flickering due to asyncronous loading of parts of the
               page hidden behind feature flags.
             </p>
-            <iframe class="mt-2" src="ex1/index.html"></iframe>
+            <iframe src="ex1/index.html"></iframe>
           </div>
         </div>
         <div class="col">
@@ -99,6 +99,56 @@
             <h5 class="d-flex bd-highlight">
               <div class="w-100 bd-highlight">
                 EX2: Delay rendering until initialized
+              </div>
+              <div class="flex-shrink-1 bd-highlight">
+                <a href="#" class="reload"
+                  ><img
+                    src="https://www.unpkg.com/bootstrap-icons@1.0.0/icons/arrow-repeat.svg"
+                /></a>
+              </div>
+            </h5>
+            <p>
+              In this strategy, we delay the full rendering of the page until
+              the LaunchDarkly client is initialized. You'll notice a blank page
+              during the 100-200ms delay while the client is being initialized,
+              but then the page is rendered all at once when the client is
+              ready. This technique works best on single page apps since you're
+              guaranteed that all components on the page will be in the state
+              you expect when rendered.
+            </p>
+            <iframe src="ex2/index.html"></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col">
+          <div class="ex p-2">
+            <h5 class="d-flex bd-highlight">
+              <div class="w-100 bd-highlight">
+                EX3: Delayed rendering with placeholder
+              </div>
+              <div class="flex-shrink-1 bd-highlight">
+                <a href="#" class="reload"
+                  ><img
+                    src="https://www.unpkg.com/bootstrap-icons@1.0.0/icons/arrow-repeat.svg"
+                /></a>
+              </div>
+            </h5>
+            <p>
+              This next example is the same as EX2, but with a placeholder to
+              simulate the actual content that will appear once the client is
+              loaded. The benefits of this are the same as EX2, but with less
+              time spent waiting on blank page. This is a technique popularized
+              by Facebook.
+            </p>
+            <iframe src="ex3/index.html"></iframe>
+          </div>
+        </div>
+        <div class="col">
+          <div class="ex p-2">
+            <h5 class="d-flex bd-highlight">
+              <div class="w-100 bd-highlight">
+                EX4: Delay rendering until initialized
               </div>
               <div class="flex-shrink-1 bd-highlight">
                 <a href="#" class="reload"
