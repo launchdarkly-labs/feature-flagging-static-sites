@@ -1,0 +1,10 @@
+.ex {
+  border: 1px solid #eee;
+  border-radius:5px;
+}
+iframe {
+  outline:none;
+  border: 1px solid #eee;
+  width:100%;
+  height:400px;
+}

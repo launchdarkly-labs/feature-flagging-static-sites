@@ -13,21 +13,36 @@
       integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
       crossorigin="anonymous"
     />
+    <link href="style.css" rel="stylesheet" />
   </head>
   <body>
     <div class="container-fluid p-4">
-      <h1>
+      <h2>
         Feature flag strategies with static sites
-      </h1>
+      </h2>
       <p>
-        The following examples explore the strategies described in <a href="">Using feature flags on static sites</a>.
+        The following examples explore the strategies described in
+        <a
+          href="https://docs.launchdarkly.com/guides/best-practices/using-feature-flags-on-static-sites"
+          >Using feature flags on static sites</a
+        >.
       </p>
-      <div class="row">
+      <div class="row mt-4">
         <div class="col">
-          One of three columns
+          <div class="ex p-2">
+            <h6>
+              Render first then initialize
+            </h6>
+            <iframe src="ex1/index.html"></iframe>
+          </div>
         </div>
         <div class="col">
-          One of three columns
+          <div class="ex p-2">
+            <h6>
+              Delay rendering until initialized
+            </h6>
+            <iframe src="ex1/index.html"></iframe>
+          </div>
         </div>
       </div>
     </div>
