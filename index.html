@@ -40,13 +40,38 @@
         <a
           href="https://docs.launchdarkly.com/guides/best-practices/using-feature-flags-on-static-sites"
           >Using feature flags on static sites</a
-        >. To make best use of these examples, click on the refresh button on the upper right of each example.
+        >. There are four examples on this page. Each example is a separate page
+        in
+        <a
+          href="https://glitch.com/~feature-flagging-static-sites"
+          target="_blank"
+          >a Glitch app</a
+        >
+        displayed in an iframe. To make best use of these examples, click on the
+        refresh button on the upper right of each example to refresh the iframe
+        in each box.
+      </p>
+      <p>
+        To see the effect of these strategies better, you can simulate a slow
+        network connection using the Chrome Developer Tools network tools to
+        <a
+          href="https://developers.google.com/web/tools/chrome-devtools/network#throttle"
+          target="_blank"
+          >simulate a slow network connection</a
+        >.
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor/Throttling"
+          target="_blank"
+          >Firefox has a similar tool</a
+        >.
       </p>
       <div class="row mt-4">
         <div class="col">
           <div class="ex p-2">
             <h5 class="d-flex bd-highlight">
-              <div class="w-100 bd-highlight">EX1: Render page first then initialize client</div>
+              <div class="w-100 bd-highlight">
+                EX1: Render page first then initialize client
+              </div>
               <div class="flex-shrink-1 bd-highlight">
                 <a href="#" class="reload"
                   ><img
@@ -55,7 +80,16 @@
               </div>
             </h5>
             <p>
-              The following page renders the contents of the page in parallel to loading and initializing the LaunchDarkly SDK/client. You'll notice the header and body background colors change shortly after the LaunchDarkly client initializes. In most cases this is within 100-200ms. This delay is more pronounced when you have less bandwidth available.
+              The following page renders the contents of the page in parallel to
+              loading and initializing the LaunchDarkly SDK/client. You'll
+              notice the header and body background colors change shortly after
+              the LaunchDarkly client initializes. In most cases this is within
+              100-200ms. This delay is more pronounced when you have less
+              bandwidth available. If you can accept a page that renders
+              progressively rather than all at once, then this technique is best
+              for you. It doesn't slow down the initial render, but your users
+              may see some flickering due to asyncronous loading of parts of the
+              page hidden behind feature flags.
             </p>
             <iframe class="mt-2" src="ex1/index.html"></iframe>
           </div>
@@ -64,7 +98,7 @@
           <div class="ex p-2">
             <h5 class="d-flex bd-highlight">
               <div class="w-100 bd-highlight">
-                EX2Delay rendering until initialized
+                EX2: Delay rendering until initialized
               </div>
               <div class="flex-shrink-1 bd-highlight">
                 <a href="#" class="reload"
@@ -74,7 +108,13 @@
               </div>
             </h5>
             <p>
-              In this strategy, we delay the full rendering of the page until the LaunchDarkly client is initialized. You'll notice a blank page during the 100-200ms delay while the client is being initialized, but then the page is rendered all at once when the client is ready. This technique works best on single page apps since you're guaranteed that all components on the page will be in the state you expect when rendered.
+              In this strategy, we delay the full rendering of the page until
+              the LaunchDarkly client is initialized. You'll notice a blank page
+              during the 100-200ms delay while the client is being initialized,
+              but then the page is rendered all at once when the client is
+              ready. This technique works best on single page apps since you're
+              guaranteed that all components on the page will be in the state
+              you expect when rendered.
             </p>
             <iframe src="ex2/index.html"></iframe>
           </div>
