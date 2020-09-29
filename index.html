@@ -70,7 +70,7 @@
           <div class="ex p-2">
             <h5 class="d-flex bd-highlight">
               <div class="w-100 bd-highlight">
-                EX1: Render page first then initialize client
+                Example 1: Render page first then initialize client
               </div>
               <div class="flex-shrink-1 bd-highlight">
                 <a href="#" class="reload"
@@ -98,7 +98,7 @@
           <div class="ex p-2">
             <h5 class="d-flex bd-highlight">
               <div class="w-100 bd-highlight">
-                EX2: Delay rendering until initialized
+                Example 2: Delay rendering until initialized
               </div>
               <div class="flex-shrink-1 bd-highlight">
                 <a href="#" class="reload"
@@ -125,7 +125,7 @@
           <div class="ex p-2">
             <h5 class="d-flex bd-highlight">
               <div class="w-100 bd-highlight">
-                EX3: Delayed rendering with placeholder
+                Example 3: Delayed rendering with placeholder
               </div>
               <div class="flex-shrink-1 bd-highlight">
                 <a href="#" class="reload"
@@ -148,7 +148,7 @@
           <div class="ex p-2">
             <h5 class="d-flex bd-highlight">
               <div class="w-100 bd-highlight">
-                EX4: Delay rendering until initialized
+                Example 4: Delay rendering using the LD React SDK
               </div>
               <div class="flex-shrink-1 bd-highlight">
                 <a href="#" class="reload"
@@ -158,15 +158,16 @@
               </div>
             </h5>
             <p>
-              In this strategy, we delay the full rendering of the page until
-              the LaunchDarkly client is initialized. You'll notice a blank page
-              during the 100-200ms delay while the client is being initialized,
-              but then the page is rendered all at once when the client is
-              ready. This technique works best on single page apps since you're
-              guaranteed that all components on the page will be in the state
-              you expect when rendered.
+              This strategy is almost exactly like example 2, but utilizes the
+              React SDK's
+              <a
+                href="https://docs.launchdarkly.com/sdk/client-side/react#asyncwithldprovider"
+                >asyncWithLDProvider</a
+              >
+              function to guarantee that flags are available before your
+              components mount.
             </p>
-            <iframe src="ex2/index.html"></iframe>
+            <iframe src="ex4/index.html"></iframe>
           </div>
         </div>
       </div>

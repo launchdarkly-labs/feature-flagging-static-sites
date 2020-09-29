@@ -1,4 +1,4 @@
-# Simple page jank demo
+# Feature flag strategies with static sites
 
 This page is a static HTML page that uses LaunchDarkly to control 
 the background color. This demonstrates the effect of the delay
