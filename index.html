@@ -108,15 +108,19 @@
               </div>
             </h5>
             <p>
-              This is example is almost identical to example 1, but with the addition of the 
-              <code>{ "bootstrap": "localstorage" }</code> option added to <code>ldclient.initialize()</code>. 
-              If the localStorage is empty (first visit), the experience will be similar to the first example,
-              but subsequent visits will retreive the cached flag variation from localStorage.
+              This is example is almost identical to example 1, but with the
+              addition of the
+              <code>{ "bootstrap": "localstorage" }</code> option added to
+              <code>ldclient.initialize()</code>. If the localStorage is empty
+              (first visit), the experience will be similar to the first
+              example, but subsequent visits will retreive the cached flag
+              variation from localStorage.
             </p>
             <iframe src="ex2/index.html"></iframe>
           </div>
         </div>
       </div>
+      <div class="row mt-4">
         <div class="col">
           <div class="ex p-2">
             <h5 class="d-flex bd-highlight">
@@ -142,8 +146,6 @@
             <iframe src="ex3/index.html"></iframe>
           </div>
         </div>
-      </div>
-      <div class="row mt-4">
         <div class="col">
           <div class="ex p-2">
             <h5 class="d-flex bd-highlight">
@@ -167,6 +169,8 @@
             <iframe src="ex4/index.html"></iframe>
           </div>
         </div>
+      </div>
+      <div class="row mt-4">
         <div class="col">
           <div class="ex p-2">
             <h5 class="d-flex bd-highlight">
@@ -185,12 +189,19 @@
               React SDK's
               <a
                 href="https://docs.launchdarkly.com/sdk/client-side/react#asyncwithldprovider"
-                >asyncWithLDProvider</a
+                ><code>asyncWithLDProvider</code></a
               >
               function to guarantee that flags are available before your
-              components mount.
+              components mount. This is similar to example 3, but using the
+              React SDK.
             </p>
             <iframe src="ex5/dist/index.html"></iframe>
+          </div>
+        </div>
+        <div class="col">
+          <div class="p-2">
+            <h5 class="d-flex bd-highlight">
+            </h5>
           </div>
         </div>
       </div>
