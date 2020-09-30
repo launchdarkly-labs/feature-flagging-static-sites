@@ -1,6 +1,7 @@
+import React from "react";
 import { useFlags, useLDClient } from "launchdarkly-react-client-sdk";
 
-const Main = () => {
+export default function Main() {
   const { redesign } = useFlags();
   return (
     <>
@@ -199,5 +200,3 @@ const Main = () => {
     </>
   );
 };
-
-export default withLDConsumer()(Main);

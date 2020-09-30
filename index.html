@@ -98,7 +98,30 @@
           <div class="ex p-2">
             <h5 class="d-flex bd-highlight">
               <div class="w-100 bd-highlight">
-                Example 2: Delay rendering until initialized
+                Example 2: Same as example 1, but with localStorage bootstrap
+              </div>
+              <div class="flex-shrink-1 bd-highlight">
+                <a href="#" class="reload"
+                  ><img
+                    src="https://www.unpkg.com/bootstrap-icons@1.0.0/icons/arrow-repeat.svg"
+                /></a>
+              </div>
+            </h5>
+            <p>
+              This is example is almost identical to example 1, but with the addition of the 
+              <code>{ "bootstrap": "localstorage" }</code> option added to <code>ldclient.initialize()</code>. 
+              If the localStorage is empty (first visit), the experience will be similar to the first example,
+              but subsequent visits will retreive the cached flag variation from localStorage.
+            </p>
+            <iframe src="ex2/index.html"></iframe>
+          </div>
+        </div>
+      </div>
+        <div class="col">
+          <div class="ex p-2">
+            <h5 class="d-flex bd-highlight">
+              <div class="w-100 bd-highlight">
+                Example 3: Delay rendering until initialized
               </div>
               <div class="flex-shrink-1 bd-highlight">
                 <a href="#" class="reload"
@@ -116,7 +139,7 @@
               guaranteed that all components on the page will be in the state
               you expect when rendered.
             </p>
-            <iframe src="ex2/index.html"></iframe>
+            <iframe src="ex3/index.html"></iframe>
           </div>
         </div>
       </div>
@@ -125,7 +148,7 @@
           <div class="ex p-2">
             <h5 class="d-flex bd-highlight">
               <div class="w-100 bd-highlight">
-                Example 3: Delayed rendering with placeholder
+                Example 4: Delayed rendering with placeholder
               </div>
               <div class="flex-shrink-1 bd-highlight">
                 <a href="#" class="reload"
@@ -141,14 +164,14 @@
               time spent waiting on blank page. This is a technique popularized
               by Facebook.
             </p>
-            <iframe src="ex3/index.html"></iframe>
+            <iframe src="ex4/index.html"></iframe>
           </div>
         </div>
         <div class="col">
           <div class="ex p-2">
             <h5 class="d-flex bd-highlight">
               <div class="w-100 bd-highlight">
-                Example 4: Delay rendering using the LD React SDK
+                Example 5: Delay rendering using the LD React SDK
               </div>
               <div class="flex-shrink-1 bd-highlight">
                 <a href="#" class="reload"
@@ -167,7 +190,7 @@
               function to guarantee that flags are available before your
               components mount.
             </p>
-            <iframe src="ex4/dist/index.html"></iframe>
+            <iframe src="ex5/dist/index.html"></iframe>
           </div>
         </div>
       </div>
