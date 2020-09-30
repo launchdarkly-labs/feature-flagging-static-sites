@@ -8,7 +8,7 @@ import Main from "./Main.jsx";
     clientSideID: "5e29e34e2a49f409996d7194",
     user: { anonymous: true },
     options: {
-      /* ... */
+      /* bootstrap: "localstorage" */
     }
   });
   render(
