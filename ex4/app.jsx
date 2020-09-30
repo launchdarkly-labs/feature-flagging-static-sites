@@ -1,4 +1,21 @@
+import { render } from "react";
+import { asyncWithLDProvider } from "launchdarkly-react-client-sdk";
 
+(async () => {
+  const LDProvider = await asyncWithLDProvider({
+    clientSideID: "5e29e34e2a49f409996d7194",
+    user: { anonymous: true },
+    options: {
+      /* ... */
+    }
+  });
+  render(
+    <LDProvider>
+      <Main />
+    </LDProvider>,
+    document.getElementById("root")
+  );
+})();
 
 function Main() {
   return (
