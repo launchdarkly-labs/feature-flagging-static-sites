@@ -1,0 +1,1 @@
+{"version":3,"sources":["newdesign.css"],"names":[],"mappings":"AAAA,QACE,qBACF,CACA,UACE,wBACF,CACA,kBACE,+BACF","file":"newdesign.0b1f3465.css","sourceRoot":"..","sourcesContent":["#loader {\n  background-color: #ddd; \n}\n.redesign {\n  background-color: #ADD8E6;\n}\n.redesign #header {\n  background-color: #ddd !important;\n}"]}
